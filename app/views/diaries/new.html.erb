@@ -1,0 +1,19 @@
+<%= form_with model: @diary_point, url: diaries_path, method: :post, local: true do |f| %>
+  <%= render "shared/error_messages", model: f.object %>
+
+
+  <div class="field">
+  <%= f.label :title, "タイトル"%><br />
+  <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+  <%= f.label :text, "本文"%><br />
+  <%= f.text_area :text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿" %>
+  </div>
+
+<% end %>
