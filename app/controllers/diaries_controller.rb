@@ -11,7 +11,7 @@ class DiariesController < ApplicationController
     @diary_point = DiaryPoint.new(diary_params)
     if @diary_point.valid?
       @diary_point.save
-      redirect_to rootpath
+      redirect_to root_path
     else
       render :new
     end

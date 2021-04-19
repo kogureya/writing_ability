@@ -1,4 +1,4 @@
-<%= form_with model: @diary_point, url: diaries_path, method: :post, local: true do |f| %>
+<%= form_with model: @diary_point, url: diaries_path, method: :post, id: "diary-form", local: true do |f| %>
   <%= render "shared/error_messages", model: f.object %>
 
 
@@ -8,8 +8,8 @@
   </div>
 
   <div class="field">
-  <%= f.label :text, "本文"%><br />
-  <%= f.text_area :text %>
+  <%= f.label :text, "本文"%><div id="word-length" > 0文字</div> <br />
+  <%= f.text_area :text, id: "count-text" %>
   </div>
 
   <div class="actions">
