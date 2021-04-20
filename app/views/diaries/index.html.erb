@@ -1,1 +1,20 @@
-トップページ
+<div class='main-wrapper'>
+  <div class='point-area'>
+  </div>
+  <div class='diary-area'>
+    <ul class='all-diary'>
+      <% @diary.each do |diary| %>
+        <% if diary.user_id == current_user.id %>
+          <li class='list'>
+            <div class='diary-date'>
+              投稿日    <%= diary.created_at.strftime"%m/%d" %>
+            </div>
+            <div class='diary-title'>
+              <%= diary.title %>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

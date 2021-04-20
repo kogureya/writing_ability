@@ -1,6 +1,7 @@
 class DiariesController < ApplicationController
 
   def index
+    @diary = Diary.includes(:user).order("created_at DESC")
   end
 
   def new
