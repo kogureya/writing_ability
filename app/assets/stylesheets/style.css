@@ -14,7 +14,7 @@ a {
   justify-content: space-between;
   height: 60px;
   width: calc(100vw - calc(100vw - 100%));
-  background-color: skyblue;
+  background-color: #f5deb3;
 }
 
 .error-text {
@@ -31,7 +31,7 @@ a {
 
 .point-area {
   width: 200px;
-  background-color: seagreen;
+  background-color: rgb(54, 143, 92);
   height: 100vh;
 }
 
@@ -59,7 +59,7 @@ a {
 
 /* showエリア */
 
-/* .show-wrap {
+.show-wrap {
   height: 100%;
   width: 100%;
   display: flex;
@@ -68,18 +68,13 @@ a {
 
 .show-window {
   margin: 100px;
-  font-size: 20px;
+  font-size: 25px;
   border: 10px outset blue;
   border-radius: 10px;
   padding: 10px;
   overflow-y: scroll;
 }
 
-.meeting-member-list{
-  display: flex;
-  flex-wrap: wrap;
+.show-text {
+  white-space: pre-line;
 }
-
-.meeting-member{
-  margin: 0 10px;
-} */

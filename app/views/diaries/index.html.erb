@@ -6,12 +6,14 @@
       <% @diary.each do |diary| %>
         <% if diary.user_id == current_user.id %>
           <li class='list'>
-            <div class='diary-date'>
-              投稿日    <%= diary.created_at.strftime"%m/%d" %>
-            </div>
-            <div class='diary-title'>
-              <%= diary.title %>
-            </div>
+            <%= link_to diary_path(diary.id) do %>
+              <div class='diary-date'>
+                投稿日    <%= diary.created_at.strftime"%m/%d" %>
+              </div>
+              <div class='diary-title'>
+                <%= diary.title %>
+              </div>
+            <% end %>
           </li>
         <% end %>
       <% end %>
