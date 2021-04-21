@@ -31,8 +31,21 @@ a {
 
 .point-area {
   width: 200px;
-  background-color: rgb(54, 143, 92);
+  background-color: #c7fdc7;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.tree-images {
+  position: absolute;
+  bottom: 0px;
+}
+
+.tree-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .diary-area {
