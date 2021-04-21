@@ -1,0 +1,11 @@
+<%# ユーザーのポイント合計値 %>
+<%= @point %>
+  <div class='tree-images'>
+    <% if @point > 200 %>
+      <%= image_tag '/images/tree_seichou10.png' %>
+    <% elsif @point > 100 %>
+      <%= image_tag '/images/tree_seichou01.png' %>
+    <% else %>
+      <%= image_tag '/images/tree_seichou01.png' %>
+    <% end %>
+  </div>
