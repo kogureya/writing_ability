@@ -14,14 +14,14 @@ a {
   justify-content: space-between;
   height: 60px;
   width: calc(100vw - calc(100vw - 100%));
-  background-color: #f5deb3;
+  background-color: #fff8dc;
 }
 
 .error-text {
   color: red;
 }
 
-/* メインエリア */
+/* indexページ */
 
 .main-wrapper {
   display: flex;
@@ -77,24 +77,39 @@ a {
 
 
 
-/* showエリア */
+/* showページ */
 
-.show-wrap {
-  height: 100%;
-  width: 100%;
+.show-page {
+  height: calc(100vh - 60px);
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
 
-.show-window {
-  margin: 100px;
-  font-size: 25px;
-  border: 10px outset blue;
-  border-radius: 10px;
-  padding: 10px;
-  overflow-y: scroll;
+.show-book {
+  margin: 20px;
+  padding: 0 30px 50px 30px;
 }
 
-.show-text {
+.show-window {
+  font-size: 20px;
+  overflow-y: scroll;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  color: #696969;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 1px #e6e6e6;
+  padding: 0.3em 1em 2em 1em;
+  box-shadow:2px 2px 0 rgba(0,0,0,.1);
+}
+
+.show-text{
   white-space: pre-line;
+  background-color: #fff;
+  background-image:
+  linear-gradient(180deg, rgba(100, 100, 100, 0) 0%, rgba(100, 100, 100, 0) 98%, #646464 100%);
+  background-size: 100% 2em;
+  line-height: 2em;
+  padding: 2em 1em 0.2em 1em;
 }
