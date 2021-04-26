@@ -21,6 +21,28 @@ a {
   color: red;
 }
 
+/* devise */
+.devise-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-wrap {
+  font-size: 25px;  
+  background-color: #fff8dc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.retrun-text {
+  font-size: 15px;
+}
+
+
+
+
 /* indexページ */
 
 .main-wrapper {
