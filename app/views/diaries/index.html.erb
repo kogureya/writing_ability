@@ -1,11 +1,20 @@
-<%= render '/shared/header' %>
 <div class='main-wrapper'>
   <% if user_signed_in?%>
-    <div class='point-area'>
+
+    <div class='index-side-bar'>
       <%# ユーザーのポイント合計値 %>
-      <%= @point %>
-      <%= render 'tree' %>
+      <div class='side-name'>
+        <%= current_user.nickname %>の日記
+      </div>
+      <div class='side-point'>
+      所持ポイント<br />
+      <%= @point %>pt
+      </div>
+      <%= link_to "育成する", '#', class: :game_page %>
+      <%= link_to "日記作成", new_diary_path, class: :new_diary %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout %>
     </div>
+
     <div class='diary-area'>
       <ul class='all-diary'>
         <% @diary.each do |diary| %>
