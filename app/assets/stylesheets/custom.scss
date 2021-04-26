@@ -13,3 +13,9 @@
   background-image: image-url('wood_m.jpg');
 }
 
+.landing-page {
+  background-image: image-url('book.jpg');
+  background-size: cover;
+  height: calc(100vh - 60px);
+  width: 100vw;
+}
