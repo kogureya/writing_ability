@@ -177,6 +177,8 @@ a {
   padding: 15px;
 }
 
+/* newページ */
+
 .new-diary-back {
   font-size: 20px;
   display: flex;
@@ -196,4 +198,16 @@ textarea.note{
 
 .title_new  {
   width: 40vw;
+}
+
+.return_toppage_new {
+  font-size: 16px;
+  width: 120px;
+  background: #e4e5e6;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
 }
