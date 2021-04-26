@@ -74,7 +74,7 @@ a {
   font-size: 20px;
 }
 
-.new_diary {
+.new_diary_btn {
   font-size: 20px;
 }
 
@@ -175,4 +175,25 @@ a {
   right: 32px;
   position: fixed;
   padding: 15px;
+}
+
+.new-diary-back {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea.note{
+  line-height: 20px;
+  background: linear-gradient(to bottom, #eee 1px, white 1px);
+  background-size: 100% 20px;
+  background-origin: content-box;
+  background-attachment: local;
+  height: 60vh;
+  width: 80vw;
+}
+
+.title_new  {
+  width: 40vw;
 }
