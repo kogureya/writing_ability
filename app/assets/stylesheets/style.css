@@ -74,6 +74,23 @@ a {
   padding-right: 50px;
 }
 
+/* 未ログイン */
+
+.landing-page {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.top-message {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.registration-btn {
+  font-size: 20px;
+}
 
 
 

@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>文字数日記</title>
+    <title>ゲーム日記</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-    <header class="header">
-      <div class='site-title'>
-        <%= link_to 'サイトタイトル', root_path %>
-      </div>
-      <% if user_signed_in? %>
-        <div class='right-btn'>
-          <%= current_user.nickname %>の日記
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :logout %>
-          <%= link_to "日記作成", new_diary_path, class: :header_btn %>
-        </div>
-      <% else %>
-        <div class='right-btn'>
-          <%= link_to "ログイン", new_user_session_path, class: :header_btn %>
-          <%= link_to "新規登録", new_user_registration_path, class: :header_btn %>
-        </div>
-      <% end %>
-    </header>
-
-
 
   <body>
     <%= yield %>

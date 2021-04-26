@@ -1,25 +1,43 @@
+<%= render '/shared/header' %>
 <div class='main-wrapper'>
-  <div class='point-area'>
-    <%# ユーザーのポイント合計値 %>
-    <%= @point %>
-    <%= render 'tree' %>
-  </div>
-  <div class='diary-area'>
-    <ul class='all-diary'>
-      <% @diary.each do |diary| %>
-        <% if diary.user_id == current_user.id %>
-          <li class='list'>
-            <%= link_to diary_path(diary.id) do %>
-              <div class='diary-date'>
-                投稿日    <%= diary.created_at.strftime"%m/%d" %>
-              </div>
-              <div class='diary-title'>
-                <%= diary.title %>
-              </div>
-            <% end %>
-          </li>
+  <% if user_signed_in?%>
+    <div class='point-area'>
+      <%# ユーザーのポイント合計値 %>
+      <%= @point %>
+      <%= render 'tree' %>
+    </div>
+    <div class='diary-area'>
+      <ul class='all-diary'>
+        <% @diary.each do |diary| %>
+          <% if diary.user_id == current_user.id %>
+            <li class='list'>
+              <%= link_to diary_path(diary.id) do %>
+                <div class='diary-date'>
+                  投稿日    <%= diary.created_at.strftime"%m/%d" %>
+                </div>
+                <div class='diary-title'>
+                  <%= diary.title %>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
-  </div>
+      </ul>
+    </div>
+    <% else %>
+      <div class='landing-page'>
+        <div class='top-message'>
+          ゲーム日記(仮)<br /><br />
+          <div class='site-message'>
+            毎日楽しみながら<br />
+            日記を書きましょう<br /><br />
+          </div>
+          <%= link_to "新規登録", new_user_registration_path, class: :header_btn %><br /><br />
+          <div class='registration-btn'> 登録済の方はこちら</div>
+
+          <%= link_to "ログイン", new_user_session_path, class: :header_btn %>
+
+        </div>
+      </div>
+    <% end %>
 </div>
