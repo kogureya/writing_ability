@@ -1,19 +1,23 @@
-<%= form_with model: @diary_point, url: diaries_path, method: :post, id: "diary-form", local: true do |f| %>
-  <%= render "shared/error_messages", model: f.object %>
+<div class='new-diary-back'>
+  <div class='new-diary'>
+    <%= form_with model: @diary_point, url: diaries_path, method: :post, id: "diary-form", local: true do |f| %>
+      <%= render "shared/error_messages", model: f.object %>
 
 
-  <div class="field">
-  <%= f.label :title, "タイトル"%><br />
-  <%= f.text_field :title %>
-  </div>
+      <div class="field">
+      <%= f.label :title, "タイトル"%><br />
+      <%= f.text_field :title, class: :title_new %>
+      </div>
 
-  <div class="field">
-  <%= f.label :text, "本文"%><div id="word-length" > 0文字</div> <br />
-  <%= f.text_area :text, id: "count-text" %>
-  </div>
+      <div class="field">
+      <%= f.label :text, "本文"%><br />
+      <%= f.text_area :text, class: :note %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "投稿" %>
-  </div>
+      <div class="actions">
+        <%= f.submit "投稿" %>
+      </div>
 
-<% end %>
+    <% end %>
+
+</div>
