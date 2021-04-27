@@ -51,13 +51,13 @@ a {
   overflow-y: hidden;
 }
 
-.index-side-bar {
+.diary-side-bar {
   width: 200px;
-  background-color: #c7fdc7;
+  background-color: #fff8dc;
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  border: green 10px solid;
+  border: brown 10px solid;
   flex-flow: column;
   padding-left: 20px;
 }
