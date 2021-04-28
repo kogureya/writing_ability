@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :diaries, only: [:new, :create, :show]
   resources :points, only: :index
+  resources :feeds, only: [:new, :create]
 end

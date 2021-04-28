@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   def index
     if user_signed_in?
     @diary = Diary.includes(:user).order("created_at DESC")
-    @point = Point.includes(:user).where(user_id: current_user.id).sum(:point)
+    @point = ((Point.includes(:user).where(user_id: current_user.id).sum(:point)) - (Feed.includes(:user).where(user_id: current_user.id).sum(:feed_point)))
     end
   end
 

@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
 
+  has_many :diaries
+  has_many :points
+  has_many :feeds
+
 end
