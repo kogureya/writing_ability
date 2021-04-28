@@ -51,13 +51,13 @@ a {
   overflow-y: hidden;
 }
 
-.index-side-bar {
+.diary-side-bar {
   width: 200px;
-  background-color: #c7fdc7;
+  background-color: #fff8dc;
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  border: green 10px solid;
+  border: brown 10px solid;
   flex-flow: column;
   padding-left: 20px;
 }
@@ -210,4 +210,37 @@ textarea.note{
   right: 32px;
   position: fixed;
   padding: 15px;
+}
+
+/* pointページ */
+
+.point-side-bar {
+  width: 200px;
+  background-color: #fff8dc;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  border: brown 10px solid;
+  flex-flow: column;
+  padding-left: 20px;
+}
+
+.point-page-wrapper {
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.point-area {
+  width: calc(100vw - calc(100vw - 100%) - 200px);
+  height: 100%;
+  overflow-y: scroll;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed-btn {
+  font-size: 20px;
 }

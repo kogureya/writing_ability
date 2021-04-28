@@ -1,0 +1,26 @@
+<div class='point-page-wrapper'>
+
+
+    <div class='point-side-bar'>
+      <%# ユーザーのポイント合計値 %>
+      <div class='side-name'>
+        <%= current_user.nickname %>の日記
+      </div>
+      <div class='side-point'>
+      所持ポイント<br />
+      <%= @point %>pt
+      </div>
+
+        <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
+          <%= f.hidden_field :feed_point, :value => 100 %>
+          <%= f.submit "餌をあげる" ,class:"feed-btn" %>
+        <% end %>
+
+      <%= link_to "日記一覧に戻る", root_path %>
+    </div>
+    <div class='point-area'>
+      <div class='hamster-image'>
+        <%= image_tag "ham1.jpg", id: :ham_image %>
+      </div>
+    </div>
+</div>
