@@ -11,16 +11,30 @@
       <%= @point %>pt
       </div>
 
-        <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
-          <%= f.hidden_field :feed_point, :value => 100 %>
-          <%= f.submit "餌をあげる" ,class:"feed-btn" %>
+        <% if @point < 100 %>
+          <%= "ポイント不足です！" %>
+        <% else %>
+          <% if @lastfeed <= 600 %>
+            <%= "食事中・・・" %>
+          <% else %>
+            <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
+              <%= f.hidden_field :feed_point, :value => 100 %>
+              <%= f.submit "餌をあげる" ,class:"feed-btn" %>
+            <% end %>
+          <% end %>
         <% end %>
 
       <%= link_to "日記一覧に戻る", root_path %>
     </div>
     <div class='point-area'>
       <div class='hamster-image'>
-        <%= image_tag "ham1.jpg", id: :ham_image %>
+        <% if @lastfeed > 300 && @lastfeed <= 600 %>
+          <%= image_tag "ham4.jpg", id: :ham_image %>
+        <% elsif @lastfeed <= 300 %>
+          <%= image_tag "ham3.jpg", id: :ham_image %>
+        <% else %>
+          <%= image_tag "ham1.jpg", id: :ham_image %>
+        <% end %>
       </div>
     </div>
 </div>
