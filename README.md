@@ -47,6 +47,7 @@ ID：aozora@email.com
 
 - has_many :diaries
 - has_many :points
+- has_many :feeds
 
 ## diaries テーブル
 
@@ -71,3 +72,12 @@ ID：aozora@email.com
 
 belongs_to :user
 belongs_to :diary
+
+## feeds テーブル
+
+| Column                 | Type       | Options           |
+| ---------------------- | ---------- | ----------------- |
+| feed_point             | integer    | null: false       |
+| user                   | references | foreign_key: true |
+
+- belongs_to :user
