@@ -23,9 +23,14 @@ ID：aozora@email.com
 
 要件定義URL：https://docs.google.com/spreadsheets/d/1d2xf9S5pLwZaYInN6-oBk2qViai9ChhbrgrgyZqECOQ/edit#gid=282075926
 
-画像：
+画像：  
+[![Image from Gyazo](https://i.gyazo.com/d6ceac00cd159e86b511fb52706e0f43.jpg)](https://gyazo.com/d6ceac00cd159e86b511fb52706e0f43)  
+左側サイドバーの日記作成より日記の作成ページへ遷移します。  
+ゲームページへよりゲームのページへ遷移します。  
 
-
+[![Image from Gyazo](https://i.gyazo.com/630c1a6c7a4c0a74e58752e5f1325450.jpg)](https://gyazo.com/630c1a6c7a4c0a74e58752e5f1325450)
+左側サイドバーの餌をあげるボタンを押すとハムスターがアクションします。  
+前回より三日以上空いてしまうとハムスターがいなくなってしまう仕様となっています。  
 
 
 # テーブル設計
