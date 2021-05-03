@@ -25,6 +25,8 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
   end
 
+  def how_to_use
+  end
 
   private
   def diary_params

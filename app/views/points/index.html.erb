@@ -14,12 +14,31 @@
         <% if @point < 100 %>
           <%= "ポイント不足です！" %>
         <% else %>
-          <% if @lastfeed <= 600 %>
-            <%= "食事中・・・" %>
+          <% if Feed.exists?(user_id: current_user.id) %>
+            <% if @lastfeed > 259200 %>
+              <% if @point < 500 %>
+                <%= "ポイント不足です！" %>
+              <% else %>
+                <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
+                  <%= f.hidden_field :feed_point, :value => 500 %>
+                  <%= f.submit "探しにいく" ,class:"feed-btn" %>
+                  <%= "-500pt" %>
+                <% end %>
+              <% end %>
+            <% elsif @lastfeed <= 600 %>
+              <%= "食事中・・・" %>
+            <% else %>
+              <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
+                <%= f.hidden_field :feed_point, :value => 100 %>
+                <%= f.submit "餌をあげる" ,class:"feed-btn" %>
+                <%= "-100pt" %>
+              <% end %>
+            <% end %>
           <% else %>
             <%= form_with model: @feed, url: feeds_path, local: true do |f| %>
               <%= f.hidden_field :feed_point, :value => 100 %>
               <%= f.submit "餌をあげる" ,class:"feed-btn" %>
+              <%= "-100pt" %>
             <% end %>
           <% end %>
         <% end %>
@@ -28,10 +47,16 @@
     </div>
     <div class='point-area'>
       <div class='hamster-image'>
-        <% if @lastfeed > 300 && @lastfeed <= 600 %>
-          <%= image_tag "ham4.jpg", id: :ham_image %>
-        <% elsif @lastfeed <= 300 %>
-          <%= image_tag "ham3.jpg", id: :ham_image %>
+        <% if Feed.exists?(user_id: current_user.id) %>
+          <% if @lastfeed > 259200%>
+            <%= image_tag "ham5.jpg", id: :ham_image %>
+          <% elsif (@lastfeed > 300) && (@lastfeed <= 600) %>
+            <%= image_tag "ham4.jpg", id: :ham_image %>
+          <% elsif @lastfeed <= 300 %>
+            <%= image_tag "ham3.jpg", id: :ham_image %>
+          <% else %>
+            <%= image_tag "ham1.jpg", id: :ham_image %>
+          <% end %>
         <% else %>
           <%= image_tag "ham1.jpg", id: :ham_image %>
         <% end %>
