@@ -1,29 +1,31 @@
-アプリケーション名  
+## アプリケーション名  
 writing_ability
 
-アプリケーション概要  
+## アプリケーション概要  
 日記を毎日欠かさず書くことで、文章構成力を向上させることを目的として作成しました。  
 毎日続けるためにゲーム性を導入し飽きずに続けられるよう設計しています。
 
-URL：http://35.73.84.139/
+## URL  
+http://35.73.84.139/
 
-テスト用アカウント  
+### テスト用アカウント  
 ID：aozora@email.com  
 パスワード：aozora  
 ポイントを使用したシステムを確認するためのアカウントです。  
 ポイント取得のための文章は青空文庫様よりお借りしております。
 
-利用方法  
+## 利用方法  
 日記を書くことでそれに応じたポイントを取得します。  
 取得したポイントでゲームを遊ぶことができます。
 
-目指した課題解決  
+## 目指した課題解決  
 文章を書くことが苦手な人やブログを始めたが長続きせずやめてしまった人が  
 書き続けることで毎日の習慣にできるよう考えて制作しました。  
 
-要件定義URL：https://docs.google.com/spreadsheets/d/1d2xf9S5pLwZaYInN6-oBk2qViai9ChhbrgrgyZqECOQ/edit#gid=282075926
+## 要件定義URL  
+https://docs.google.com/spreadsheets/d/1d2xf9S5pLwZaYInN6-oBk2qViai9ChhbrgrgyZqECOQ/edit#gid=282075926
 
-画像：  
+## 画像  
 [![Image from Gyazo](https://i.gyazo.com/d6ceac00cd159e86b511fb52706e0f43.jpg)](https://gyazo.com/d6ceac00cd159e86b511fb52706e0f43)  
 左側サイドバーの日記作成より日記の作成ページへ遷移します。  
 ゲームページへよりゲームのページへ遷移します。  
@@ -32,8 +34,27 @@ ID：aozora@email.com
 左側サイドバーの餌をあげるボタンを押すとハムスターがアクションします。  
 前回より三日以上空いてしまうとハムスターがいなくなってしまう仕様となっています。  
 
+## 開発環境
+### バックエンド
+Ruby2.6.5, Ruby on Rails6.0.3.6  
+### フロントエンド  
+HTML, CSS  
+### データベース
+MySQL, SequelPro
+### インフラ
+AWS(EC2),Capistrano
+### Webサーバ(本番環境)
+nginx
+### アプリケーションサーバ(本番環境)
+unicorn
+### ソース管理
+GitHub,GitHubDesktop
+### テスト
+RSpec
+### エディタ
+VSCode
 
-# テーブル設計
+# DB設計
 
 ## users テーブル
 
@@ -81,3 +102,5 @@ belongs_to :diary
 | user                   | references | foreign_key: true |
 
 - belongs_to :user
+
+
