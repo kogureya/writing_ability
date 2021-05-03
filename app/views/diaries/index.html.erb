@@ -4,7 +4,8 @@
     <div class='diary-side-bar'>
       <%# ユーザーのポイント合計値 %>
       <div class='side-name'>
-        <%= current_user.nickname %>の日記
+        <%= current_user.nickname %>の日記<br />
+        <%= link_to "使い方", how_to_use_diaries_path, class: :use_name %>
       </div>
       <div class='side-point'>
       所持ポイント<br />
